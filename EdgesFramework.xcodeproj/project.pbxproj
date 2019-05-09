@@ -14,6 +14,14 @@
 		B238EAA12282A66200C5C943 /* LambertW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAA02282A66200C5C943 /* LambertW.swift */; };
 		B238EAA32282A67400C5C943 /* Cross.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAA22282A67400C5C943 /* Cross.swift */; };
 		B238EAA52282A6D300C5C943 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAA42282A6D300C5C943 /* Extensions.swift */; };
+		B238EAB022841BB800C5C943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAAF22841BB800C5C943 /* AppDelegate.swift */; };
+		B238EAB222841BBA00C5C943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B238EAB122841BBA00C5C943 /* Assets.xcassets */; };
+		B238EAB522841BBA00C5C943 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B238EAB322841BBA00C5C943 /* MainMenu.xib */; };
+		B238EAC122841BBA00C5C943 /* edgesTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAC022841BBA00C5C943 /* edgesTestTests.swift */; };
+		B238EACA22841D0E00C5C943 /* EdgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAC922841D0E00C5C943 /* EdgesView.swift */; };
+		B238EACC22841DC700C5C943 /* Edges Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EACB22841DC700C5C943 /* Edges Extensions.swift */; };
+		B238EACE228437B000C5C943 /* testScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B238EACD228437B000C5C943 /* testScene.scn */; };
+		B238EAD022843C8B00C5C943 /* SCNScene + Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EACF22843C8B00C5C943 /* SCNScene + Line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +31,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B2297E1F2282A4E6008BE4B0;
 			remoteInfo = EdgesFramework;
+		};
+		B238EABD22841BBA00C5C943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2297E172282A4E6008BE4B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B238EAAC22841BB800C5C943;
+			remoteInfo = edgesTest;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -37,6 +52,19 @@
 		B238EAA02282A66200C5C943 /* LambertW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambertW.swift; sourceTree = "<group>"; };
 		B238EAA22282A67400C5C943 /* Cross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cross.swift; sourceTree = "<group>"; };
 		B238EAA42282A6D300C5C943 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B238EAAD22841BB800C5C943 /* edgesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edgesTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B238EAAF22841BB800C5C943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B238EAB122841BBA00C5C943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B238EAB422841BBA00C5C943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B238EAB622841BBA00C5C943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B238EAB722841BBA00C5C943 /* edgesTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = edgesTest.entitlements; sourceTree = "<group>"; };
+		B238EABC22841BBA00C5C943 /* edgesTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = edgesTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B238EAC022841BBA00C5C943 /* edgesTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edgesTestTests.swift; sourceTree = "<group>"; };
+		B238EAC222841BBA00C5C943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B238EAC922841D0E00C5C943 /* EdgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgesView.swift; sourceTree = "<group>"; };
+		B238EACB22841DC700C5C943 /* Edges Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edges Extensions.swift"; sourceTree = "<group>"; };
+		B238EACD228437B000C5C943 /* testScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = testScene.scn; sourceTree = "<group>"; };
+		B238EACF22843C8B00C5C943 /* SCNScene + Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNScene + Line.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +83,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B238EAAA22841BB800C5C943 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B238EAB922841BBA00C5C943 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +105,8 @@
 			children = (
 				B2297E222282A4E6008BE4B0 /* EdgesFramework */,
 				B2297E2D2282A4E6008BE4B0 /* EdgesFrameworkTests */,
+				B238EAAE22841BB800C5C943 /* edgesTest */,
+				B238EABF22841BBA00C5C943 /* edgesTestTests */,
 				B2297E212282A4E6008BE4B0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +116,8 @@
 			children = (
 				B2297E202282A4E6008BE4B0 /* EdgesFramework.framework */,
 				B2297E292282A4E6008BE4B0 /* EdgesFrameworkTests.xctest */,
+				B238EAAD22841BB800C5C943 /* edgesTest.app */,
+				B238EABC22841BBA00C5C943 /* edgesTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +142,31 @@
 				B2297E302282A4E6008BE4B0 /* Info.plist */,
 			);
 			path = EdgesFrameworkTests;
+			sourceTree = "<group>";
+		};
+		B238EAAE22841BB800C5C943 /* edgesTest */ = {
+			isa = PBXGroup;
+			children = (
+				B238EAAF22841BB800C5C943 /* AppDelegate.swift */,
+				B238EACF22843C8B00C5C943 /* SCNScene + Line.swift */,
+				B238EAB122841BBA00C5C943 /* Assets.xcassets */,
+				B238EAB322841BBA00C5C943 /* MainMenu.xib */,
+				B238EAB622841BBA00C5C943 /* Info.plist */,
+				B238EAB722841BBA00C5C943 /* edgesTest.entitlements */,
+				B238EAC922841D0E00C5C943 /* EdgesView.swift */,
+				B238EACB22841DC700C5C943 /* Edges Extensions.swift */,
+				B238EACD228437B000C5C943 /* testScene.scn */,
+			);
+			path = edgesTest;
+			sourceTree = "<group>";
+		};
+		B238EABF22841BBA00C5C943 /* edgesTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B238EAC022841BBA00C5C943 /* edgesTestTests.swift */,
+				B238EAC222841BBA00C5C943 /* Info.plist */,
+			);
+			path = edgesTestTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +219,41 @@
 			productReference = B2297E292282A4E6008BE4B0 /* EdgesFrameworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B238EAAC22841BB800C5C943 /* edgesTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B238EAC322841BBA00C5C943 /* Build configuration list for PBXNativeTarget "edgesTest" */;
+			buildPhases = (
+				B238EAA922841BB800C5C943 /* Sources */,
+				B238EAAA22841BB800C5C943 /* Frameworks */,
+				B238EAAB22841BB800C5C943 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = edgesTest;
+			productName = edgesTest;
+			productReference = B238EAAD22841BB800C5C943 /* edgesTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B238EABB22841BBA00C5C943 /* edgesTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B238EAC622841BBA00C5C943 /* Build configuration list for PBXNativeTarget "edgesTestTests" */;
+			buildPhases = (
+				B238EAB822841BBA00C5C943 /* Sources */,
+				B238EAB922841BBA00C5C943 /* Frameworks */,
+				B238EABA22841BBA00C5C943 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B238EABE22841BBA00C5C943 /* PBXTargetDependency */,
+			);
+			name = edgesTestTests;
+			productName = edgesTestTests;
+			productReference = B238EABC22841BBA00C5C943 /* edgesTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +271,13 @@
 					B2297E282282A4E6008BE4B0 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					B238EAAC22841BB800C5C943 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					B238EABB22841BBA00C5C943 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = B238EAAC22841BB800C5C943;
+					};
 				};
 			};
 			buildConfigurationList = B2297E1A2282A4E6008BE4B0 /* Build configuration list for PBXProject "EdgesFramework" */;
@@ -173,6 +286,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = B2297E162282A4E6008BE4B0;
 			productRefGroup = B2297E212282A4E6008BE4B0 /* Products */;
@@ -181,6 +295,8 @@
 			targets = (
 				B2297E1F2282A4E6008BE4B0 /* EdgesFramework */,
 				B2297E282282A4E6008BE4B0 /* EdgesFrameworkTests */,
+				B238EAAC22841BB800C5C943 /* edgesTest */,
+				B238EABB22841BBA00C5C943 /* edgesTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +310,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B2297E272282A4E6008BE4B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B238EAAB22841BB800C5C943 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B238EAB222841BBA00C5C943 /* Assets.xcassets in Resources */,
+				B238EAB522841BBA00C5C943 /* MainMenu.xib in Resources */,
+				B238EACE228437B000C5C943 /* testScene.scn in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B238EABA22841BBA00C5C943 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,6 +355,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B238EAA922841BB800C5C943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B238EACC22841DC700C5C943 /* Edges Extensions.swift in Sources */,
+				B238EAD022843C8B00C5C943 /* SCNScene + Line.swift in Sources */,
+				B238EAB022841BB800C5C943 /* AppDelegate.swift in Sources */,
+				B238EACA22841D0E00C5C943 /* EdgesView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B238EAB822841BBA00C5C943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B238EAC122841BBA00C5C943 /* edgesTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -230,7 +382,23 @@
 			target = B2297E1F2282A4E6008BE4B0 /* EdgesFramework */;
 			targetProxy = B2297E2B2282A4E6008BE4B0 /* PBXContainerItemProxy */;
 		};
+		B238EABE22841BBA00C5C943 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B238EAAC22841BB800C5C943 /* edgesTest */;
+			targetProxy = B238EABD22841BBA00C5C943 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B238EAB322841BBA00C5C943 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B238EAB422841BBA00C5C943 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B2297E322282A4E6008BE4B0 /* Debug */ = {
@@ -447,6 +615,86 @@
 			};
 			name = Release;
 		};
+		B238EAC422841BBA00C5C943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = edgesTest/edgesTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3ASHMCMJEN;
+				INFOPLIST_FILE = edgesTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.edgesTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B238EAC522841BBA00C5C943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = edgesTest/edgesTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3ASHMCMJEN;
+				INFOPLIST_FILE = edgesTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.edgesTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B238EAC722841BBA00C5C943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3ASHMCMJEN;
+				INFOPLIST_FILE = edgesTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.edgesTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/edgesTest.app/Contents/MacOS/edgesTest";
+			};
+			name = Debug;
+		};
+		B238EAC822841BBA00C5C943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3ASHMCMJEN;
+				INFOPLIST_FILE = edgesTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.edgesTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/edgesTest.app/Contents/MacOS/edgesTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -473,6 +721,24 @@
 			buildConfigurations = (
 				B2297E382282A4E6008BE4B0 /* Debug */,
 				B2297E392282A4E6008BE4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B238EAC322841BBA00C5C943 /* Build configuration list for PBXNativeTarget "edgesTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B238EAC422841BBA00C5C943 /* Debug */,
+				B238EAC522841BBA00C5C943 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B238EAC622841BBA00C5C943 /* Build configuration list for PBXNativeTarget "edgesTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B238EAC722841BBA00C5C943 /* Debug */,
+				B238EAC822841BBA00C5C943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
