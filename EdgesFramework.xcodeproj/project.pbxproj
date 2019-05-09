@@ -10,6 +10,10 @@
 		B2297E2A2282A4E6008BE4B0 /* EdgesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2297E202282A4E6008BE4B0 /* EdgesFramework.framework */; };
 		B2297E2F2282A4E6008BE4B0 /* EdgesFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2297E2E2282A4E6008BE4B0 /* EdgesFrameworkTests.swift */; };
 		B2297E312282A4E6008BE4B0 /* EdgesFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = B2297E232282A4E6008BE4B0 /* EdgesFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B238EA9F2282A63B00C5C943 /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EA9E2282A63B00C5C943 /* Edges.swift */; };
+		B238EAA12282A66200C5C943 /* LambertW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAA02282A66200C5C943 /* LambertW.swift */; };
+		B238EAA32282A67400C5C943 /* Cross.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAA22282A67400C5C943 /* Cross.swift */; };
+		B238EAA52282A6D300C5C943 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAA42282A6D300C5C943 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		B2297E292282A4E6008BE4B0 /* EdgesFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdgesFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2297E2E2282A4E6008BE4B0 /* EdgesFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgesFrameworkTests.swift; sourceTree = "<group>"; };
 		B2297E302282A4E6008BE4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B238EA9E2282A63B00C5C943 /* Edges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edges.swift; sourceTree = "<group>"; };
+		B238EAA02282A66200C5C943 /* LambertW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambertW.swift; sourceTree = "<group>"; };
+		B238EAA22282A67400C5C943 /* Cross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cross.swift; sourceTree = "<group>"; };
+		B238EAA42282A6D300C5C943 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,10 @@
 			children = (
 				B2297E232282A4E6008BE4B0 /* EdgesFramework.h */,
 				B2297E242282A4E6008BE4B0 /* Info.plist */,
+				B238EA9E2282A63B00C5C943 /* Edges.swift */,
+				B238EAA42282A6D300C5C943 /* Extensions.swift */,
+				B238EAA02282A66200C5C943 /* LambertW.swift */,
+				B238EAA22282A67400C5C943 /* Cross.swift */,
 			);
 			path = EdgesFramework;
 			sourceTree = "<group>";
@@ -148,6 +160,7 @@
 				TargetAttributes = {
 					B2297E1F2282A4E6008BE4B0 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					B2297E282282A4E6008BE4B0 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B238EA9F2282A63B00C5C943 /* Edges.swift in Sources */,
+				B238EAA32282A67400C5C943 /* Cross.swift in Sources */,
+				B238EAA12282A66200C5C943 /* LambertW.swift in Sources */,
+				B238EAA52282A6D300C5C943 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +357,7 @@
 		B2297E352282A4E6008BE4B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -359,6 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.EdgesFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -366,6 +385,7 @@
 		B2297E362282A4E6008BE4B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -392,6 +412,7 @@
 		B2297E382282A4E6008BE4B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3ASHMCMJEN;
@@ -410,6 +431,7 @@
 		B2297E392282A4E6008BE4B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3ASHMCMJEN;
