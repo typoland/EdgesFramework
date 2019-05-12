@@ -10,7 +10,7 @@
 		B2297E2A2282A4E6008BE4B0 /* EdgesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2297E202282A4E6008BE4B0 /* EdgesFramework.framework */; };
 		B2297E2F2282A4E6008BE4B0 /* EdgesFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2297E2E2282A4E6008BE4B0 /* EdgesFrameworkTests.swift */; };
 		B2297E312282A4E6008BE4B0 /* EdgesFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = B2297E232282A4E6008BE4B0 /* EdgesFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B238EA9F2282A63B00C5C943 /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EA9E2282A63B00C5C943 /* Edges.swift */; };
+		B238EA9F2282A63B00C5C943 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EA9E2282A63B00C5C943 /* Style.swift */; };
 		B238EAA12282A66200C5C943 /* LambertW.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAA02282A66200C5C943 /* LambertW.swift */; };
 		B238EAA32282A67400C5C943 /* Cross.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAA22282A67400C5C943 /* Cross.swift */; };
 		B238EAA52282A6D300C5C943 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238EAA42282A6D300C5C943 /* Extensions.swift */; };
@@ -48,7 +48,7 @@
 		B2297E292282A4E6008BE4B0 /* EdgesFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdgesFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2297E2E2282A4E6008BE4B0 /* EdgesFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgesFrameworkTests.swift; sourceTree = "<group>"; };
 		B2297E302282A4E6008BE4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B238EA9E2282A63B00C5C943 /* Edges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edges.swift; sourceTree = "<group>"; };
+		B238EA9E2282A63B00C5C943 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		B238EAA02282A66200C5C943 /* LambertW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambertW.swift; sourceTree = "<group>"; };
 		B238EAA22282A67400C5C943 /* Cross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cross.swift; sourceTree = "<group>"; };
 		B238EAA42282A6D300C5C943 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -65,6 +65,7 @@
 		B238EACB22841DC700C5C943 /* Edges Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edges Extensions.swift"; sourceTree = "<group>"; };
 		B238EACD228437B000C5C943 /* testScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = testScene.scn; sourceTree = "<group>"; };
 		B238EACF22843C8B00C5C943 /* SCNScene + Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNScene + Line.swift"; sourceTree = "<group>"; };
+		B2E638AA2287FBF20043F038 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +128,7 @@
 			children = (
 				B2297E232282A4E6008BE4B0 /* EdgesFramework.h */,
 				B2297E242282A4E6008BE4B0 /* Info.plist */,
-				B238EA9E2282A63B00C5C943 /* Edges.swift */,
+				B238EA9E2282A63B00C5C943 /* Style.swift */,
 				B238EAA42282A6D300C5C943 /* Extensions.swift */,
 				B238EAA02282A66200C5C943 /* LambertW.swift */,
 				B238EAA22282A67400C5C943 /* Cross.swift */,
@@ -147,6 +148,7 @@
 		B238EAAE22841BB800C5C943 /* edgesTest */ = {
 			isa = PBXGroup;
 			children = (
+				B2E638AA2287FBF20043F038 /* MyPlayground.playground */,
 				B238EAAF22841BB800C5C943 /* AppDelegate.swift */,
 				B238EACF22843C8B00C5C943 /* SCNScene + Line.swift */,
 				B238EAB122841BBA00C5C943 /* Assets.xcassets */,
@@ -340,7 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B238EA9F2282A63B00C5C943 /* Edges.swift in Sources */,
+				B238EA9F2282A63B00C5C943 /* Style.swift in Sources */,
 				B238EAA32282A67400C5C943 /* Cross.swift in Sources */,
 				B238EAA12282A66200C5C943 /* LambertW.swift in Sources */,
 				B238EAA52282A6D300C5C943 /* Extensions.swift in Sources */,
