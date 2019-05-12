@@ -11,7 +11,7 @@ import EdgesFramework
 import SceneKit
 
 
-extension Style {
+extension MultidimensionalStyle {
 
     func edgePoints(axis:Int, edge:Int) -> (start:[Double], end:[Double], value:[Double]) {
 

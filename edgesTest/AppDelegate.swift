@@ -21,13 +21,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         
         
-        var z = Style()
+        var z = MultidimensionalStyle()
         z.addAxis(name: "Light", with: 0.1)
         z.addAxis(name: "Normal", with: 0.5)
-        z.addAxis(name: "Text", with: 0.9)
-        z[0,1] = 0.1
-        z[0,2] = 0.3
-        z[0,3] = 0.7
+        z.addAxis(name: "Text", with: 0.5)
+        z[0,1] = 0.4
+        z[0,2] = 0.6
+        z[0,3] = 0.9
         print (z)
         let s = z.coordinates
         let n = z.name

@@ -8,27 +8,26 @@
 
 import Foundation
 
-public struct Style {
+public struct MultidimensionalStyle {
     
-    struct Axis {
+    struct StyleAxis {
         
         var name: String = ""
-        var edges: [Edge] = []
+        var edges: [Double] = []
         
-        init() {
-        }
+        init() {}
         
         init (name: String, edges : [Double]) {
             self.name = name
-            self.edges =  edges.map {Edge(value: $0)}
+            self.edges = edges//.map {Edge(value: $0)}
         }
         
-        init (name: String, edges: [Edge]) {
-            self.name = name
-            self.edges = edges
-        }
+//        init (name: String, edges: [Double]) {
+//            self.name = name
+//            self.edges = edges
+//        }
         
-        subscript (i: Int) -> Edge {
+        subscript (i: Int) -> Double {
             get {
                 return edges [i]
             }
@@ -40,7 +39,7 @@ public struct Style {
             return edges.count
         }
     }
-    
+    /*
     struct Edge {
         var value:Double = 0
         
@@ -48,14 +47,14 @@ public struct Style {
             self.value = value
         }
     }
-    
+    */
     
     enum EdgesErrors:Error {
         case wrongEdgesNumber(edges: Int)
         case axesNumberLessThanOne(axes: Int)
     }
 
-    private var _axes: [Axis] = []
+    private var _axes: [StyleAxis] = []
     public var name:String {
         return _axes.reduce(into: "", {$0 += $1.name})
     }
@@ -63,41 +62,41 @@ public struct Style {
     public init () {}
     
     public init (_ name:String, value: Double) {
-        _axes = [Axis( name: name, edges: [ Edge(value: value) ])]
+        _axes = [StyleAxis( name: name, edges: [ value ])]
     }
 
     public init (_ name:String, _ arrays: [Double]) {
-        _axes = [Axis(name: name, edges: arrays)]
+        _axes = [StyleAxis(name: name, edges: arrays)]
     }
     
     public init (_ names:[String], _ array: [[Double]]) {
-        _axes = (0..<array.count).map {Axis( name: names[$0], edges: array[$0])}
+        _axes = (0..<array.count).map {StyleAxis( name: names[$0], edges: array[$0])}
     }
     
-    init (axes: [Axis]) {
+    init (axes: [StyleAxis]) {
         _axes = axes
     }
-    
+    /*
     init (_ names:[String], edges: [[Edge]]) {
-        _axes = (0..<edges.count).map { Axis(name: names[$0], edges: edges[$0] )}
+        _axes = (0..<edges.count).map { StyleAxis(name: names[$0], edges: edges[$0] )}
     }
-    
+    */
     
     
     public subscript (axisNr:Int, edgeNr:Int) -> Double {
         get {
-            return _axes[axisNr][edgeNr].value
+            return _axes[axisNr][edgeNr]
         }
         set {
-            _axes[axisNr][edgeNr].value = newValue
+            _axes[axisNr][edgeNr] = newValue
         }
     }
     
     mutating public func addAxis(name: String, with value:Double) {
 
-        _axes = _axes.map {Axis( name: $0.name, edges: $0.edges+$0.edges)}
+        _axes = _axes.map {StyleAxis( name: $0.name, edges: $0.edges+$0.edges)}
 
-        let newAxis = Axis(name: name, edges: Array<Double>(repeating: value, count: numberOfEdges(for: axesCount+1)))
+        let newAxis = StyleAxis(name: name, edges: Array<Double>(repeating: value, count: numberOfEdges(for: axesCount+1)))
         _axes.append(newAxis)
         
         //for debug only:
@@ -108,12 +107,11 @@ public struct Style {
 //                }
     }
     
-    var coords = [Double]()
     
     public mutating func removeAxis(index:Int) -> Double {
         
         if self.axesCount == 1 {
-            var result = self[0,0]
+            let result = self[0,0]
             self._axes = []
             return result
         }
@@ -129,17 +127,17 @@ public struct Style {
             var removed = [Double]()
             
             for edgeNr in 0 ..< axes[axisNr].count / 2 {
-                let first = axes[axisNr][edgeNr].value
+                let first = axes[axisNr][edgeNr]
                 
                 let egdeIndex = edgeNr + (axes[axisNr].count / 2)
                 
-                let second = axes[axisNr][egdeIndex].value
+                let second = axes[axisNr][egdeIndex]
                 
                 let thirdIndex = edgeNr.insert(bit: false, at: axisNr)
-                let third = removedAxis[thirdIndex].value
+                let third = removedAxis[thirdIndex]
                 
                 let offset = 1 << axisNr
-                let fourth = removedAxis[thirdIndex + offset].value
+                let fourth = removedAxis[thirdIndex + offset]
                 let val = cross(x1: first, x2: second, y1: third, y2: fourth)
                 
                 newEdges.append(val.x) // val.x)
@@ -154,11 +152,10 @@ public struct Style {
   
         }
         
-        self = Style(axes.map {$0.name}, shortedStyleValues)
+        self = MultidimensionalStyle(axes.map {$0.name}, shortedStyleValues)
         
-        
-        var removedStyle = Style(Array(repeating: "", count: removedStyleValues.count), removedStyleValues)
-        
+        var removedStyle = MultidimensionalStyle(Array(repeating: "", count: removedStyleValues.count), removedStyleValues)
+
         var at:Double = Double.nan
         
         while removedStyle.axesCount > 0 {
@@ -172,6 +169,7 @@ public struct Style {
         return _axes.count
     }
     
+    
     public var coordinates:[Double]  {
         var result:[Double] = []
         var e = self
@@ -181,11 +179,6 @@ public struct Style {
         }
 
         return result
-    
-//        (0..<self.axesCount-1).forEach{ _ in
-//            result.append(e.removeAxis(index: 0)[0,0])
-      
-//        return result
     }
 //    public var edgesCount:Int {
 //        return _axes.reduce(into: 0, {$0 += $1.count})
@@ -199,7 +192,7 @@ public struct Style {
 //        if axesCount < 1 {
 //            fatalError("Axis is less than 0")//EdgesErrors.axesNumberLessThanOne(axes: axes)
 //        }
-        return 1 << (axesCount - 1)
+        return _axes[0].edges.count // 1 << (axesCount - 1)
     }
 
     func numberOfEdges(for axesCount: Int) -> Int {
@@ -218,13 +211,13 @@ public struct Style {
     }
 }
 
-extension Style: CustomStringConvertible {
+extension MultidimensionalStyle: CustomStringConvertible {
     public var description: String {
         let axesStr = _axes.reduce(into:"", {output, edges in
-            let edgesStr = "\t\(edges.name):" + edges.edges.reduce(into:"\t", {$0 += String(format: "%0.4f, ", $1.value)})
+            let edgesStr = "\t\(edges.name):" + edges.edges.reduce(into:"\t", {$0 += String(format: "%0.4f, ", $1)})
             output += "\(edgesStr)\n" })
         let coords = coordinates.reduce(into: "\t", {$0 += String(format: "%0.4f, ", $1)})
-        return "Style \"\(name)\": \(axesCount) axes,\n\(axesStr)\n\tcoords: [\(coords)]"
+        return "Style \"\(name)\": \(axesCount) axes\n\tcoords: [\(coords)]\n\(axesStr)"
     }
 }
 
