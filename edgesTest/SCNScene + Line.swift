@@ -58,7 +58,9 @@ extension SCNVector3 {
      */
     var length: CGFloat {
         get {
-            return CGFloat(sqrtf(Float(lengthSquared)))
+            let result =  CGFloat(sqrtf(Float(lengthSquared)))
+            print (result)
+            return result
         }
         set {
             self = self.unit * newValue
@@ -74,6 +76,7 @@ extension SCNVector3 {
             let x2 = x*x
             let y2 = y*y
             let z2 = z*z
+            print (x, y, z)
             return x2 + y2 + z2
         }
     }
@@ -171,7 +174,7 @@ func +=( left: inout SCNVector3, right: SCNVector3) {
 /**
  v1 = v2 - v3
  */
-func -(left: SCNVector3, right: SCNVector3) -> SCNVector3 {
+func - (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
     return SCNVector3Make(left.x - right.x, left.y - right.y, left.z - right.z)
 }
 
@@ -281,7 +284,7 @@ public extension SCNScene {
     class func line(from : SCNVector3, to : SCNVector3, width : Int, color : NSColor) -> SCNNode {
         let vector = to - from
         let lineLength = vector.length
-        
+        print ("lineLength", lineLength)
         let cylinder = SCNCylinder(radius: 1, height: lineLength)
         cylinder.radialSegmentCount = width
         cylinder.firstMaterial?.diffuse.contents = color

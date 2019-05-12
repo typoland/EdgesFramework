@@ -19,15 +19,9 @@ extension Edges {
         var b = Array(repeating: Double.nan, count: axesCount)
         var c = Array(repeating: Double.nan, count: axesCount)
         
-        
-        
         let a1 = edge.insert(bit: false, at: axis)
         let b1 = edge.insert(bit: true, at: axis)
-        let c1 = 1 << axis
-        
 
-        //print (a1.bits(axesCount), b1.bits(axesCount), c1.bits(axesCount))
-        
         for i in 0..<axesCount {
             
             a[i] = a1 & (1 << i) == 0 ? 0.0 : 1.0

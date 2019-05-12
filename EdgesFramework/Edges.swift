@@ -17,10 +17,14 @@ public struct Edges {
 
     private var _axes: [[Double]]
     
-    public init (_ value: Double) {
+    public init (_ value: Double, position:[Double] = []) {
         _axes = [[value]]
     }
 
+    public init (_ arrays: [[Double]]) {
+        _axes = arrays
+    }
+    
     public subscript (axis:Int, edge:Int) -> Double {
         get {
             return _axes[axis][edge]
@@ -37,22 +41,25 @@ public struct Edges {
         let newAxis = Array<Double>(repeating: value, count: numberOfEdges(for: axesCount+1))
         _axes.append(newAxis)
         //for debug only:
-        //        (0..<_axes.count).forEach{ axisNr in
-        //            (0..<_axes[axisNr].count).forEach({
-        //                _axes[axisNr][$0] = Double($0)/100.0 + Double(axisNr)/10.0
-        //            })
-        //        }
+//                (0..<_axes.count).forEach{ axisNr in
+//                    (0..<_axes[axisNr].count).forEach({
+//                        _axes[axisNr][$0] = Double($0)/50.0 + Double(axisNr)/10.0
+//                    })
+//                }
     }
     
-    mutating public func removeAxis(index:Int) {
-        guard _axes.count > 1 else {return}
+    mutating public func removeAxis(index:Int) -> Edges {
+        
+        guard _axes.count > 1 else {return Edges(_axes[0][0])}
 
         var newAxes = [[Double]]()
+        var removedAxis = [[Double]]()
         var axes = _axes
 
         let lastAxis = axes.remove(at: index)//[_axes.count-1]
         for axisNr in 0 ..< axes.count {
             var newEdges = [Double]()
+            var removed = [Double]()
             for edge in 0 ..< axes[axisNr].count / 2 {
                 let first = axes[axisNr][edge]
                 
@@ -64,16 +71,36 @@ public struct Edges {
                 let fourth = lastAxis[thirdIndex + offset]
                 let val = cross(x1: first, x2: second, y1: third, y2: fourth)
                 newEdges.append(val.x)
+                removed.append(val.y)
+                
+                
             }
             newAxes.append(newEdges)
+            removedAxis.append(removed)
         }
         _axes = newAxes
+        var removedEdges = Edges(0)
+        removedEdges._axes = removedAxis
+        
+        while removedEdges.axesCount > 1 {
+            removedEdges = removedEdges.removeAxis(index: removedEdges.axesCount-1)
+        }
+        
+        return removedEdges
     }
 
     public var axesCount:Int {
         return _axes.count
     }
-
+    
+    public var coordinates:[Double] {
+        var result:[Double] = []
+        var e = self
+        (0..<self.axesCount).forEach{ _ in
+            result.append(e.removeAxis(index: 0)[0,0])
+        }
+        return result
+    }
 //    public var edgesCount:Int {
 //        return _axes.reduce(into: 0, {$0 += $1.count})
 //    }
@@ -113,7 +140,7 @@ public struct Edges {
 extension Edges: CustomStringConvertible {
     public var description: String {
         let axesStr = _axes.reduce(into:"", {output, edges in
-            let edgesStr = edges.reduce(into:"\t", {$0 += String(format: "%0.2f, ", $1)})
+            let edgesStr = edges.reduce(into:"\t", {$0 += String(format: "%0.4f, ", $1)})
             output += "\(edgesStr)\n" })
         return "\(axesCount) axes,\n\(axesStr)"
     }
