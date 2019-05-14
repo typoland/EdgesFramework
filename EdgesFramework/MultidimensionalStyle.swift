@@ -93,12 +93,14 @@ public struct MultidimensionalStyle {
     }
     
     mutating public func addAxis(name: String, with value:Double) {
-
+        print ("adding axis")
         _axes = _axes.map {StyleAxis( name: $0.name, edges: $0.edges+$0.edges)}
 
         let newAxis = StyleAxis(name: name, edges: Array<Double>(repeating: value, count: numberOfEdges(for: axesCount+1)))
         _axes.append(newAxis)
-        
+        _axes.forEach({ axis in
+            print (axis.name, axis.edges)
+        })
         //for debug only:
 //                (0..<_axes.count).forEach{ axisNr in
 //                    (0..<_axes[axisNr].count).forEach({
@@ -180,6 +182,7 @@ public struct MultidimensionalStyle {
 
         return result
     }
+    
 //    public var edgesCount:Int {
 //        return _axes.reduce(into: 0, {$0 += $1.count})
 //    }

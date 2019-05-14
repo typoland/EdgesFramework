@@ -34,7 +34,7 @@ import Foundation
 import CoreGraphics
 import SceneKit
 
-extension SCNVector3 {
+public extension SCNVector3 {
     
     // Vector Length is Zero
     func isZero() -> Bool {
@@ -188,28 +188,28 @@ func -=( left: inout SCNVector3, right: SCNVector3) {
 /**
  v1 = v2 * v3
  */
-func *(left: SCNVector3, right: SCNVector3) -> SCNVector3 {
+public func *(left: SCNVector3, right: SCNVector3) -> SCNVector3 {
     return SCNVector3Make(left.x * right.x, left.y * right.y, left.z * right.z)
 }
 
 /**
  v1 *= v2
  */
-func *=( left: inout SCNVector3, right: SCNVector3) {
+public func *=( left: inout SCNVector3, right: SCNVector3) {
     left = left * right
 }
 
 /**
  v1 = v2 * x
  */
-func *(left: SCNVector3, right: CGFloat) -> SCNVector3 {
+public func *(left: SCNVector3, right: CGFloat) -> SCNVector3 {
     return SCNVector3Make(left.x * right, left.y * right, left.z * right)
 }
 
 /**
  v *= x
  */
-func *=( left: inout SCNVector3, right: CGFloat) {
+public func *=( left: inout SCNVector3, right: CGFloat) {
     left = SCNVector3Make(left.x * right, left.y * right, left.z * right)
 }
 
