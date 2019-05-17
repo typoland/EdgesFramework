@@ -19,7 +19,7 @@ public struct MultidimensionalStyle {
         
         init (name: String, edges : [Double]) {
             self.name = name
-            self.edges = edges//.map {Edge(value: $0)}
+            self.edges = edges
         }
 
         subscript (i: Int) -> Double {
