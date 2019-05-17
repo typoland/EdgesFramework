@@ -101,7 +101,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //            return}
 //
 //        for style in styles {
-//            let value = style.convertTo3D(leaveAxes: [], coordinates: style.coordinates) * 10.0
+//            let value = style.convertTo3D(leaveAxes: [], instances: style.instances) * 10.0
 //            let box = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0)
 //
 //            box.firstMaterial?.diffuse.contents = NSColor.red
@@ -128,7 +128,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //
 //
 //
-//        print ("->",e, e.coordinates)
+//        print ("->",e, e.instances)
 //        //e.addAxis(with: 0.5)
 //       /*
 //         var lines  = [SCNNode]()
@@ -138,11 +138,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //         for edgeIndex in 0..<e.edgesCount {
 //         print ("ndexes:", axisIndex, edgeIndex)
 //         let points = e.edgePoints(axis: axisIndex, edge: edgeIndex)
-//         let start = e.convertTo3D(leaveAxes: [], coordinates: points.start) * 10.0
-//         let end = e.convertTo3D(leaveAxes: [], coordinates: points.end) * 10.0
+//         let start = e.convertTo3D(leaveAxes: [], instances: points.start) * 10.0
+//         let end = e.convertTo3D(leaveAxes: [], instances: points.end) * 10.0
 //         lines.append( SCNScene.line(from: start, to: end, width: 1, color: NSColor.black))
 //
-//                let value = e.convertTo3D(leaveAxes: [], coordinates: points.value) * 10.0
+//                let value = e.convertTo3D(leaveAxes: [], instances: points.value) * 10.0
 //                let box = SCNBox(width: 0.5, height: 0.5, length: 0.5, chamferRadius: 0)
 //                box.firstMaterial?.diffuse.contents = NSColor.red
 //                let boxNode = SCNNode.init(geometry: box)
